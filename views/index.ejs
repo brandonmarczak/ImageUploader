@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Title Page</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>Upload an image that you love the most!</h1>
+
+    </header>
+
+    <section>
+        
+        <div class="container">
+           
+            <%= typeof msg != 'undefined' ? msg : '' %>
+                <form action="/upload" method="POST" enctype="multipart/form-data">
+                    <div class="file-field input-field">
+
+                            <input name="myImage" type="file">
+                       
+                        <div class="file-path-wrapper">
+                            <button type="submit" class="btn">Submit</button>
+                        </div>
+                    </div>
+                </form>
+                <br>
+                <img src="<%= typeof file != 'undefined' ? file : '' %>" class="responsive-img">
+        </div>
+
+    </section>
+
+    <footer>
+        
+        <a href="https://unsplash.com/" class="about" target="_blank">Free amazing photos!</a>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="readmore" target="_blank">To learn more Follow SuperHi!</a>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="buy" target="_blank">Inspired by this guy!</a>
+
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
